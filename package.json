@@ -3,7 +3,6 @@
   "version": "0.1.0-alpha",
   "author": "",
   "description": "",
-  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
