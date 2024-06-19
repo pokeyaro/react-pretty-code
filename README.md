@@ -78,10 +78,6 @@ Additionally, I am keen to hear your thoughts on ReactPrettyCode. Don't hesitate
 
 Pokeya (pokeya.mystic@gmail.com)
 
-## Keywords
-
-code-blocks react-syntax-highlighter mdx
-
 ## License
 
 ReactPrettyCode released under MIT license, refer LICENSE file.
