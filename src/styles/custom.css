@@ -1,0 +1,13 @@
+.custom-syntax-highlighter.pre-inner code {
+  margin-left: 0;
+}
+
+body.light-mode,
+.light-mode {
+  color: black;
+}
+
+body.dark-mode,
+.dark-mode {
+  color: white;
+}

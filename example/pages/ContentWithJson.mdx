@@ -1,0 +1,91 @@
+```metadata.json
+{
+  "filename": "Content.py",
+  "title": "Hello, MDX!",
+  "description": "This is a metadata parsing method based on JSON format.",
+  "author": "Mystic",
+  "date": "2021-09-01",
+  "tags": ["MDX", "example", "json", "python"]
+}
+```
+
+```python
+import random
+
+# Define suits and faces
+suits = ["♠", "♥", "♦", "♣"]
+faces = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+
+# Create a deck of cards
+deck = []
+for suit in suits:
+    for face in faces:
+        deck.append(f"{face} {suit}")
+
+# Shuffle the deck
+random.shuffle(deck)
+
+# Define Player and Dealer classes
+class Player:
+    def __init__(self):
+        self.hand = []
+
+    def draw(self, deck):
+        self.hand.append(deck.pop())
+
+    def show_hand(self):
+        print(f"Your cards: {', '.join(self.hand)}")
+
+# Create player and dealer
+player = Player()
+dealer = Player()
+
+# Start the game
+for _ in range(2):
+    player.draw(deck)
+    dealer.draw(deck)
+
+player.show_hand()
+
+# Game loop
+while True:
+    # Player's turn
+    action = input("Do you want to hit? (y/n): ")
+    if action.lower() == "y":
+        player.draw(deck)
+        player.show_hand()
+
+        # Check if the player busts
+        total = sum(player.get_hand_value())
+        if total > 21:
+            print("You bust! Game over!")
+            break
+    else:
+        break
+
+    # Dealer's turn
+    while True:
+        dealer_total = sum(dealer.get_hand_value())
+        if dealer_total < 17:
+            dealer.draw(deck)
+        else:
+            break
+
+# Show dealer's hand
+dealer.show_hand()
+
+# Determine the winner
+player_total = sum(player.get_hand_value())
+dealer_total = sum(dealer.get_hand_value())
+
+if player_total > 21:
+    print("You lose!")
+elif dealer_total > 21:
+    print("You win!")
+elif player_total > dealer_total:
+    print("You win!")
+elif player_total < dealer_total:
+    print("You lose!")
+else:
+    print("It's a tie!")
+```

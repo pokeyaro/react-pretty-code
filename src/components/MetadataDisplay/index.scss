@@ -1,0 +1,25 @@
+@keyframes scrollLeftWithPause {
+  0%,
+  10% {
+    transform: translateX(0%);
+  }
+  90%,
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  max-width: 180px;
+  border-radius: 12px;
+}
+
+.scroll-text {
+  display: inline-block;
+  animation: scrollLeftWithPause 12s linear infinite;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}

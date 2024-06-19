@@ -1,0 +1,47 @@
+<metadata>
+  <filename>Content.yml</filename>
+  <title>Hello, MUX!</title>
+  <description>
+    This is the metadata parsing method based on the tag syntax.
+  </description>
+  <author>Mystic</author>
+  <date>2021-09-01</date>
+  <tags>
+    <tag>MDX</tag>
+    <tag>example</tag>
+  </tags>
+</metadata>
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: <your-webapp-image>
+          ports:
+            - containerPort: 80
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_DATABASE
+              value: mydatabase
+            - name: MYSQL_USER
+              value: myuser
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-root-pass
+                  key: password
+```

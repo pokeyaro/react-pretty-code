@@ -1,0 +1,19 @@
+{
+  "style": "atom",
+  "watermarkList": ["© ReactPrettyCode", "Powered by Mystic", "In 2024"],
+  "wrapLongLines": false,
+  "showBookmarksBar": true,
+  "showBottomLine": false,
+  "showExtendedButtons": false,
+  "showLineNumbers": false,
+  "showVerticalDivideLine": false,
+  "showScrollBars": false,
+  "showCopyButton": true,
+  "copyStyle": "default",
+  "allowUserSelect": false,
+  "allowFullScreen": false,
+  "enableGlobalHint": false,
+  "enableUltraWideMode": false,
+  "enableTerminalMode": false,
+  "shellPromptSymbol": "➜ ~"
+}
