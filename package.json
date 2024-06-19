@@ -1,9 +1,8 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.0",
-  "author": "",
-  "description": "",
-  "private": true,
+  "version": "0.1.1-alpha",
+  "author": "Pokeya",
+  "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +14,13 @@
     "type": "git",
     "url": "https://github.com/pokeyaro/react-pretty-code"
   },
+  "keywords": [
+    "react",
+    "syntax-highlighting",
+    "code-block",
+    "code-reader",
+    "pretty-code"
+  ],
   "license": "MIT",
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
