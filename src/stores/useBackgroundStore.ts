@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create, type StoreApi, type UseBoundStore } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
 import type { BackgroundStyle } from '@/types'
 
@@ -46,18 +46,19 @@ export interface BackgroundState extends BackgroundStyle {
   setBackgroundColor: (color: string) => void
 }
 
-export const useBackgroundStore = create(
-  immer<BackgroundState>((set) => ({
-    backgroundColor: 'rgba(40, 44, 52, 1)',
-    ...computeHoverAndActiveColors('rgba(40, 44, 52, 1)'),
-    setBackgroundColor: (color) => {
-      const { hoverBackgroundColor, activeBackgroundColor } =
-        computeHoverAndActiveColors(color)
-      set((state) => {
-        state.backgroundColor = color
-        state.hoverBackgroundColor = hoverBackgroundColor
-        state.activeBackgroundColor = activeBackgroundColor
-      })
-    }
-  }))
-)
+export const useBackgroundStore: UseBoundStore<StoreApi<BackgroundState>> =
+  create(
+    immer<BackgroundState>((set) => ({
+      backgroundColor: 'rgba(40, 44, 52, 1)',
+      ...computeHoverAndActiveColors('rgba(40, 44, 52, 1)'),
+      setBackgroundColor: (color) => {
+        const { hoverBackgroundColor, activeBackgroundColor } =
+          computeHoverAndActiveColors(color)
+        set((state) => {
+          state.backgroundColor = color
+          state.hoverBackgroundColor = hoverBackgroundColor
+          state.activeBackgroundColor = activeBackgroundColor
+        })
+      }
+    }))
+  )

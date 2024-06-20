@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create, type StoreApi, type UseBoundStore } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
 import type { SimplifiedThemeName } from '@/types'
 
@@ -21,26 +21,27 @@ interface SystemStore {
   actions: SystemActions
 }
 
-export const useSystemStore = create<SystemStore>()(
-  immer((set) => ({
-    states: {
-      darkMode: true,
-      language: 'en-US',
-      theme: 'atom'
-    },
-    actions: {
-      toggleDarkMode: () =>
-        set((state) => {
-          state.states.darkMode = !state.states.darkMode
-        }),
-      setLanguage: (language: Language) =>
-        set((state) => {
-          state.states.language = language
-        }),
-      setTheme: (theme: SimplifiedThemeName) =>
-        set((state) => {
-          state.states.theme = theme
-        })
-    }
-  }))
-)
+export const useSystemStore: UseBoundStore<StoreApi<SystemStore>> =
+  create<SystemStore>()(
+    immer((set) => ({
+      states: {
+        darkMode: true,
+        language: 'en-US',
+        theme: 'atom'
+      },
+      actions: {
+        toggleDarkMode: () =>
+          set((state) => {
+            state.states.darkMode = !state.states.darkMode
+          }),
+        setLanguage: (language: Language) =>
+          set((state) => {
+            state.states.language = language
+          }),
+        setTheme: (theme: SimplifiedThemeName) =>
+          set((state) => {
+            state.states.theme = theme
+          })
+      }
+    }))
+  )

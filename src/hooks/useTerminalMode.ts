@@ -59,10 +59,10 @@ const useTerminalMode = (
 
     updateShowPreTag(getLabel())
 
-    const unsubscribe = useFileStore.subscribe(
-      (state) => state.states.label,
-      (newLabel: string) => updateShowPreTag(newLabel)
-    )
+    const unsubscribe = useFileStore.subscribe((state) => {
+      const newLabel = state.states.label
+      updateShowPreTag(newLabel)
+    })
 
     return () => unsubscribe()
   }, [getLabel, shellPromptSymbol])

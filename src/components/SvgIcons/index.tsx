@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-interface SvgIconProps {
+export interface SvgIconProps {
   className?: string
 }
 
