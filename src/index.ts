@@ -1,4 +1,4 @@
-import CodeBlock from '@/cores/CodeWrapper'
+import CodeBlock from './cores/CodeWrapper'
 
 export { CodeBlock }
 export default CodeBlock
