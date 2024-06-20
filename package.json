@@ -7,11 +7,15 @@
   "main": "dist/react-pretty-code.umd.js",
   "module": "dist/react-pretty-code.es.js",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build:types": "tsc --emitDeclarationOnly",
     "build:vite": "vite build",
     "build": "pnpm build:types && pnpm build:vite",
+    "prepublishOnly": "pnpm build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
