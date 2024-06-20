@@ -153,6 +153,9 @@ importers:
       vite:
         specifier: ^5.2.0
         version: 5.2.12(@types/node@20.12.12)(sass@1.77.2)
+      vite-plugin-css-injected-by-js:
+        specifier: ^3.5.1
+        version: 3.5.1(vite@5.2.12(@types/node@20.12.12)(sass@1.77.2))
       vite-plugin-static-copy:
         specifier: ^1.0.5
         version: 1.0.5(vite@5.2.12(@types/node@20.12.12)(sass@1.77.2))
@@ -2174,6 +2177,11 @@ packages:
 
   utrie@1.0.2:
     resolution: {integrity: sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==}
+
+  vite-plugin-css-injected-by-js@3.5.1:
+    resolution: {integrity: sha512-9ioqwDuEBxW55gNoWFEDhfLTrVKXEEZgl5adhWmmqa88EQGKfTmexy4v1Rh0pAS6RhKQs2bUYQArprB32JpUZQ==}
+    peerDependencies:
+      vite: '>2.0.0-0'
 
   vite-plugin-static-copy@1.0.5:
     resolution: {integrity: sha512-02k0Rox+buYdEOfeilKZSgs1gXfPf9RjVztZEIYZgVIxjsVZi6AXssjzdi+qW6zYt00d3bq+tpP2voVXN2fKLw==}
@@ -4198,6 +4206,10 @@ snapshots:
   utrie@1.0.2:
     dependencies:
       base64-arraybuffer: 1.0.2
+
+  vite-plugin-css-injected-by-js@3.5.1(vite@5.2.12(@types/node@20.12.12)(sass@1.77.2)):
+    dependencies:
+      vite: 5.2.12(@types/node@20.12.12)(sass@1.77.2)
 
   vite-plugin-static-copy@1.0.5(vite@5.2.12(@types/node@20.12.12)(sass@1.77.2)):
     dependencies:
