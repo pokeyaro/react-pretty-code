@@ -8,8 +8,9 @@ import {
   SUPPORT_DOWNLOAD_TXT,
   SUPPORT_DOWNLOAD_AUTO
 } from '@/constants'
+import type { FileTypeList } from './types'
 
-export const fileTypeList = [
+export const fileTypeList: FileTypeList = [
   {
     value: SUPPORT_DOWNLOAD_PDF,
     label: 'Adobe PDF',

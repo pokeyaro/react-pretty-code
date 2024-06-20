@@ -1,5 +1,5 @@
 import React from 'react'
-import CodeBlock from '@/index'
+import CodeBlock from '../src/index'
 import ContentWithMarkup from './pages/ContentWithMarkup.mdx'
 import ContentWithJson from './pages/ContentWithJson.mdx'
 import { Content, Metadata } from './pages/ContentWithJs'

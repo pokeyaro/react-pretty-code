@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create, type StoreApi, type UseBoundStore } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
 import { subscribeWithSelector } from 'zustand/middleware'
 
@@ -19,25 +19,26 @@ interface FileStore {
   actions: FileActions
 }
 
-export const useFileStore = create<FileStore>()(
-  subscribeWithSelector(
-    immer((set, get) => ({
-      states: {
-        label: '',
-        ext: ''
-      },
-      actions: {
-        setLabel: (label: string) =>
-          set((state) => {
-            state.states.label = label
-          }),
-        setExt: (ext: string) =>
-          set((state) => {
-            state.states.ext = ext
-          }),
-        getLabel: () => get().states.label,
-        getExt: () => get().states.ext
-      }
-    }))
+export const useFileStore: UseBoundStore<StoreApi<FileStore>> =
+  create<FileStore>()(
+    subscribeWithSelector(
+      immer((set, get) => ({
+        states: {
+          label: '',
+          ext: ''
+        },
+        actions: {
+          setLabel: (label: string) =>
+            set((state) => {
+              state.states.label = label
+            }),
+          setExt: (ext: string) =>
+            set((state) => {
+              state.states.ext = ext
+            }),
+          getLabel: () => get().states.label,
+          getExt: () => get().states.ext
+        }
+      }))
+    )
   )
-)
