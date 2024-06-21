@@ -34,7 +34,7 @@ export default defineConfig({
   server: {
     open: '/example/index.html',
     fs: {
-      allow: ['..']
+      strict: false
     }
   },
   build: {
