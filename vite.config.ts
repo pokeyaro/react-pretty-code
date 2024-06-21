@@ -10,6 +10,7 @@ import autoprefixer from 'autoprefixer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     rawMdx(),
@@ -42,7 +43,10 @@ export default defineConfig({
   },
   publicDir: false,
   server: {
-    open: '/example/index.html'
+    open: '/example/index.html',
+    fs: {
+      strict: false,
+    }
   },
   build: {
     lib: {

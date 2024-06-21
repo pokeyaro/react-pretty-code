@@ -1,3 +1,5 @@
+import { getAssetPath } from '@/lib/utils';
+
 export const DEFAULT_FILE_NAME = 'untitled'
 export const DEFAULT_FILE_EXTENSION = '.txt'
 
@@ -8,8 +10,8 @@ export const SUPPORT_DOWNLOAD_TXT = 'txt'
 export const SUPPORT_DOWNLOAD_AUTO = 'auto'
 export const SUPPORT_MAX_FILENAME_LENGTH = 12
 
-export const ASSET_ICON_PATH = '/assets/icons'
-export const ASSET_SOUND_PATH = '/assets/sounds'
+export const ASSET_ICON_PATH = getAssetPath('icons')
+export const ASSET_SOUND_PATH = getAssetPath('sounds')
 
 export const DEFAULT_PROMPT_BASH = '[root@localhost ~]#'
 export const DEFAULT_PROMPT_ZSH = '➜'
