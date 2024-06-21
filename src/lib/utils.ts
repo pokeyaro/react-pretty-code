@@ -6,5 +6,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getAssetPath(relativePath: string): string {
-  return `/node_modules/react-pretty-code/dist/assets/${relativePath}`
+  const baseUrl = new URL(import.meta.url).origin;
+  return `${baseUrl}/node_modules/react-pretty-code/dist/assets/${relativePath}`;
 }
