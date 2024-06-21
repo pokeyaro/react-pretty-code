@@ -18,7 +18,11 @@ function copyFiles(src, dest) {
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
 
-    entry.isDirectory() ? copyFiles(srcPath, destPath) : fs.copyFileSync(srcPath, destPath);
+    if (entry.isDirectory()) {
+      copyFiles(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
   }
 }
 
