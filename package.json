@@ -1,6 +1,6 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Pokeya",
   "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
@@ -18,8 +18,7 @@
     "build": "pnpm build:types && pnpm build:vite",
     "prepublishOnly": "pnpm build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "ts-patch install"
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
