@@ -5,6 +5,9 @@ import { rawMdx } from './plugins/vite-plugin-raw.mdx'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import vitePluginCssInjectedByJs from 'vite-plugin-css-injected-by-js'
 
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -27,8 +30,8 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
+        tailwindcss,
+        autoprefixer
       ]
     }
   },
