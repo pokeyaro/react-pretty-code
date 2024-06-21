@@ -58,6 +58,7 @@ export default defineConfig({
       }
     },
     cssCodeSplit: true,
-    emptyOutDir: false
+    emptyOutDir: false,
+    assetsInlineLimit: 51200
   }
 })
