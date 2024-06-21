@@ -6,12 +6,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const srcDir = path.join(__dirname, 'dist/assets');
-const targetDir = path.join(process.cwd(), 'public/assets');
+const targetDir = path.join(__dirname, '../../../public/assets');
+
+function ensureDirectoryExistence(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
 
 function copyFiles(src, dest) {
-  if (!fs.existsSync(dest)) {
-    fs.mkdirSync(dest, { recursive: true });
-  }
+  ensureDirectoryExistence(dest);
   const entries = fs.readdirSync(src, { withFileTypes: true });
 
   for (let entry of entries) {
