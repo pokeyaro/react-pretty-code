@@ -42,6 +42,7 @@ try {
 }
 log(`Project Root Directory: ${projectRoot}`);
 
+// 定义目标目录（用户项目的 public/assets 目录）
 const targetDir = path.join(projectRoot, 'public/assets');
 log(`Target Directory: ${targetDir}`);
 
@@ -59,7 +60,7 @@ function copyFiles(src, dest) {
   if (!fs.existsSync(src)) {
     throw new Error(`Source directory does not exist: ${src}`);
   }
-  
+
   createDirIfNotExists(dest);
   const entries = fs.readdirSync(src, { withFileTypes: true });
 
