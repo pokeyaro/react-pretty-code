@@ -24,6 +24,14 @@ export default defineConfig({
     }),
     vitePluginCssInjectedByJs()
   ],
+  css: {
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
