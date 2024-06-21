@@ -37,9 +37,9 @@ Written in `TypeScript`, providing type safety and convenience for users.
 
 ![demo](public/operate.gif)
 
-## Install
+## Installation
 
-Install `react-pretty-code` via `npm`, `yarn` or `pnpm`
+To install `react-pretty-code`, you can use the following command:
 
 ```bash
 # via npm
@@ -51,6 +51,17 @@ yarn add react-pretty-code
 # via pnpm
 pnpm add react-pretty-code
 ```
+
+_Note on Installation Warnings_
+
+You may see the following warning during installation:
+
+```bash
+Peer dependencies that should be installed:
+  tailwindcss@">=3.0.0 || insiders"
+```
+
+This warning is due to an internal dependency utilizing `tailwindcss-animate`. However, this warning can be ignored as it does not impact the functionality of `react-pretty-code`.
 
 ## Usage
 
