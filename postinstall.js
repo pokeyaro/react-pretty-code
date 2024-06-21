@@ -16,30 +16,8 @@ function log(message) {
 const srcDir = path.join(__dirname, 'dist/assets');
 log(`Source Directory: ${srcDir}`);
 
-// 向上遍历目录结构以找到用户项目的根目录
-function findProjectRoot(currentDir) {
-  log(`Checking directory: ${currentDir}`);
-  const possibleRoot = path.join(currentDir, 'package.json');
-  if (fs.existsSync(possibleRoot)) {
-    log(`Found project root: ${currentDir}`);
-    return currentDir;
-  } else {
-    const parentDir = path.resolve(currentDir, '..');
-    if (parentDir !== currentDir) {
-      return findProjectRoot(parentDir);
-    } else {
-      throw new Error('Could not find project root directory');
-    }
-  }
-}
-
-let projectRoot;
-try {
-  projectRoot = findProjectRoot(__dirname);
-} catch (error) {
-  log(`Error finding project root: ${error.message}`);
-  process.exit(1);
-}
+// 写死路径往上三层找到用户项目的根目录
+const projectRoot = path.resolve(__dirname, '../../../../');
 log(`Project Root Directory: ${projectRoot}`);
 
 // 定义目标目录（用户项目的 public/assets 目录）
