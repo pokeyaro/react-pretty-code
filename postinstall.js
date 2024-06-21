@@ -8,8 +8,12 @@ const __dirname = path.dirname(__filename);
 const srcDir = path.join(__dirname, 'dist/assets');
 const targetDir = path.join(__dirname, '../public/assets');
 
+console.log(`Source Directory: ${srcDir}`);
+console.log(`Target Directory: ${targetDir}`);
+
 function copyFiles(src, dest) {
   if (!fs.existsSync(dest)) {
+    console.log(`Creating target directory: ${dest}`);
     fs.mkdirSync(dest, { recursive: true });
   }
   const entries = fs.readdirSync(src, { withFileTypes: true });
@@ -21,9 +25,15 @@ function copyFiles(src, dest) {
     if (entry.isDirectory()) {
       copyFiles(srcPath, destPath);
     } else {
+      console.log(`Copying file: ${srcPath} to ${destPath}`);
       fs.copyFileSync(srcPath, destPath);
     }
   }
 }
 
-copyFiles(srcDir, targetDir);
+try {
+  copyFiles(srcDir, targetDir);
+  console.log('Files copied successfully.');
+} catch (error) {
+  console.error('Error copying files:', error);
+}
