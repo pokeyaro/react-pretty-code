@@ -16,7 +16,5 @@ export const DEFAULT_PROMPT_SQL = 'sql>'
 export const DEFAULT_PROMPT_SH = 'sh-4.4$'
 export const DEFAULT_PROMPT_PYTHON = '>>>'
 
-export const ASSET_ICON_PATH =
-  '/node_modules/react-pretty-code/dist/assets/icons'
-export const ASSET_SOUND_PATH =
-  '/node_modules/react-pretty-code/dist/assets/sounds'
+export const ASSET_ICON_PATH = 'assets/icons'
+export const ASSET_SOUND_PATH = 'assets/sounds'

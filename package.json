@@ -1,6 +1,6 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.27",
+  "version": "0.1.28-alpha",
   "author": "Pokeya",
   "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
@@ -10,13 +10,16 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "react-pretty-code-copy-assets": "./scripts/copy-assets.js"
+  },
   "scripts": {
     "dev": "vite",
     "build:types": "tsc --emitDeclarationOnly",
     "build:vite": "vite build",
     "build": "pnpm build:types && pnpm build:vite",
     "prepublishOnly": "pnpm build",
-    "postinstall": "pnpx ts-patch install",
+    "postinstall": "pnpx ts-patch install && echo 'To copy assets to your project, run: npx react-pretty-code-copy-assets'",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
