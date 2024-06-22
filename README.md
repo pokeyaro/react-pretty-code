@@ -39,7 +39,7 @@ Written in `TypeScript`, providing type safety and convenience for users.
 
 ## Installation
 
-To install `react-pretty-code`, you can use the following command:
+1. To install `react-pretty-code`, you can use the following command:
 
 ```bash
 # via npm
@@ -50,6 +50,13 @@ yarn add react-pretty-code
 
 # via pnpm
 pnpm add react-pretty-code
+```
+
+2. Initializing Resources:
+
+```bash
+# via npx
+npx react-pretty-code init
 ```
 
 _Note on Installation Warnings_
