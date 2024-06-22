@@ -1,6 +1,6 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.26",
+  "version": "0.1.27-alpha",
   "author": "Pokeya",
   "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
