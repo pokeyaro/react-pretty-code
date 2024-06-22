@@ -1,6 +1,6 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.25",
+  "version": "0.1.26-alpha",
   "author": "Pokeya",
   "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
@@ -8,8 +8,7 @@
   "module": "dist/react-pretty-code.es.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist",
-    "postinstall.js"
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
@@ -17,7 +16,7 @@
     "build:vite": "vite build",
     "build": "pnpm build:types && pnpm build:vite",
     "prepublishOnly": "pnpm build",
-    "postinstall": "node postinstall.js",
+    "postinstall": "pnpx ts-patch install",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
