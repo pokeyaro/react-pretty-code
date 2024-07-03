@@ -1,7 +1,7 @@
 import React from 'react'
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { switchFullScreen } from '@/lib/fullscreen'
 import { getContrastingColor } from '@/lib/color'
+import SyntaxHighlighter from '@/components/SyntaxHighlighter'
 import PreTagWithPrompt from '@/components/PreTagWithPrompt'
 import Watermark from '@/components/Watermark'
 import { useToastPro } from '@/components/ui/use-toast-pro'
