@@ -43,19 +43,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[44px] z-50 hover:bg-[none]'
               onClick={toggleDarkMode}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {darkMode ? (
-                  <Sun className='h-6 w-6' />
-                ) : (
-                  <Moon className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {darkMode ? (
+                    <Sun className='h-6 w-6' />
+                  ) : (
+                    <Moon className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
@@ -70,19 +73,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[76px] z-50 hover:bg-[none]'
               onClick={toggleEnableUltraWideMode}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {enableUltraWideMode ? (
-                  <ChevronsRightLeft className='h-6 w-6' />
-                ) : (
-                  <ChevronsLeftRight className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {enableUltraWideMode ? (
+                    <ChevronsRightLeft className='h-6 w-6' />
+                  ) : (
+                    <ChevronsLeftRight className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
@@ -97,19 +103,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[108px] z-50 hover:bg-[none]'
               onClick={toggleCopyStyle}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {copyStyle === 'inner' ? (
-                  <ArrowDownUp className='h-6 w-6' />
-                ) : (
-                  <ArrowUpDown className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {copyStyle === 'inner' ? (
+                    <ArrowDownUp className='h-6 w-6' />
+                  ) : (
+                    <ArrowUpDown className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
@@ -124,19 +133,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[140px] z-50 hover:bg-[none]'
               onClick={toggleAllowUserSelect}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {allowUserSelect ? (
-                  <TouchpadOff className='h-6 w-6' />
-                ) : (
-                  <Touchpad className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {allowUserSelect ? (
+                    <TouchpadOff className='h-6 w-6' />
+                  ) : (
+                    <Touchpad className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
@@ -151,19 +163,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[172px] z-50 hover:bg-[none]'
               onClick={toggleShowScrollBars}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {showScrollBars ? (
-                  <PanelTop className='h-6 w-6' />
-                ) : (
-                  <Dock className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {showScrollBars ? (
+                    <PanelTop className='h-6 w-6' />
+                  ) : (
+                    <Dock className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
@@ -178,19 +193,22 @@ const ExternalWidgets: React.FC<ExternalWidgetsProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Toggle
+              asChild
               className='absolute right-[-44px] top-[204px] z-50 hover:bg-[none]'
               onClick={toggleEnableTerminalMode}
             >
-              <Button
-                className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
-                size='icon'
-              >
-                {enableTerminalMode ? (
-                  <BookOpenText className='h-6 w-6' />
-                ) : (
-                  <SquareTerminal className='h-6 w-6' />
-                )}
-              </Button>
+              <span>
+                <Button
+                  className='bg-slate-200 transition-colors duration-300 hover:bg-orange-300'
+                  size='icon'
+                >
+                  {enableTerminalMode ? (
+                    <BookOpenText className='h-6 w-6' />
+                  ) : (
+                    <SquareTerminal className='h-6 w-6' />
+                  )}
+                </Button>
+              </span>
             </Toggle>
           </TooltipTrigger>
           <TooltipContent className='z-[100]' side='right'>
