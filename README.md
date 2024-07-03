@@ -2,7 +2,9 @@
 
 ## Background
 
-This is a small project, created with the hope that it can assist you in some way. Of course, there are still many areas for improvement. I aspire to strengthen and enhance it over time. Your support is invaluable, and if you're interested, your contributions via PRs are warmly welcomed. Thank you!
+This is a meticulously crafted project, created with the hope that it can assist you in some way. Of course, there are still many areas for improvement. I aspire to strengthen and enhance it over time. Your support is invaluable, and if you're interested, your contributions via PRs are warmly welcomed. Thank you!
+
+[查看中文文档](./README_zh.md)
 
 ## Introduce
 
@@ -36,6 +38,10 @@ Written in `TypeScript`, providing type safety and convenience for users.
 ## How to operate
 
 ![demo](public/operate.gif)
+
+## Live Demo
+
+https://rpc-react-live-demo.vercel.app/
 
 ## Installation
 
@@ -71,6 +77,8 @@ Peer dependencies that should be installed:
 This warning is due to an internal dependency utilizing `tailwindcss-animate`. However, this warning can be ignored as it does not impact the functionality of `react-pretty-code`.
 
 ## Usage
+
+> For more detailed and complete example code, please refer to this [rpc-react-demo](https://gitlab.com/pokeya/rpc-react-demo) repository!
 
 ```javascript
 import { CodeBlock } from 'react-pretty-code'
