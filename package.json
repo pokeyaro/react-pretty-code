@@ -1,6 +1,6 @@
 {
   "name": "react-pretty-code",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "author": "Pokeya",
   "description": "A React component designed to enhance code blocks with features like line numbers, copy functionality, and more.",
   "type": "module",
@@ -20,7 +20,7 @@
     "dev": "vite",
     "build:types": "tsc --emitDeclarationOnly",
     "build:vite": "vite build",
-    "build:patch": "pnpx ts-patch install",
+    "build:patch": "sh -c 'if pnpx ts-patch check | grep -E \"(tsc\\.js|typescript\\.js).*is not patched\"; then echo \"Installing ts-patch...\" && pnpx ts-patch install; else echo \"ts-patch is up to date for required files.\"; fi'",
     "build": "pnpm build:patch && pnpm build:types && pnpm build:vite",
     "prepublishOnly": "pnpm build",
     "postinstall": "node scripts/message.js",

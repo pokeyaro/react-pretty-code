@@ -23,9 +23,7 @@ export default defineConfig({
         }
       ]
     }),
-    vitePluginCssInjectedByJs({
-      topExecutionPriority: true
-    })
+    vitePluginCssInjectedByJs()
   ],
   resolve: {
     alias: {
