@@ -78,7 +78,7 @@ This warning is due to an internal dependency utilizing `tailwindcss-animate`. H
 
 ## Usage
 
-> For more detailed and complete example code, please refer to this [rpc-react-demo](https://gitlab.com/pokeya/rpc-react-demo) repository!
+> For more detailed and complete `React` example code, please refer to this [rpc-react-demo](https://gitlab.com/pokeya/rpc-react-demo) repository!
 
 ```javascript
 import { CodeBlock } from 'react-pretty-code'
@@ -93,6 +93,8 @@ const MyCodeComponent = (props) => {
 
 export default MyCodeComponent
 ```
+
+Note: Although this is a `React` component library, if you are a `Vue` user, you can refer to the [rpc-vue-demo](https://gitlab.com/pokeya/rpc-vue-demo) for integration.
 
 ## Contribution
 

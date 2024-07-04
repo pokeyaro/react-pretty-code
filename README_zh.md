@@ -78,7 +78,7 @@ Peer dependencies that should be installed:
 
 ## 使用
 
-> 更详细完整的示例代码，请查阅这个 [rpc-react-demo](https://gitlab.com/pokeya/rpc-react-demo) 仓库！
+> 更详细完整的 `React` 示例代码，请查阅这个 [rpc-react-demo](https://gitlab.com/pokeya/rpc-react-demo) 仓库！
 
 ```javascript
 import { CodeBlock } from 'react-pretty-code'
@@ -93,6 +93,8 @@ const MyCodeComponent = (props) => {
 
 export default MyCodeComponent
 ```
+
+提示：这虽然是一个 `React` 组件库，如果您是 `Vue` 用户，可以查阅[rpc-vue-demo](https://gitlab.com/pokeya/rpc-vue-demo) 进行集成。
 
 ## 贡献
 
